@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laga Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ----- Google Fonts ------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- -------- FontAwesome Icon --------- -->
+    <script src="https://kit.fontawesome.com/073a6056a7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="backpannel">
+        <div class="full-img1" id="fullImgBox1">
+            <h1 id="heading">BOOK A DEMO</h1>
+            <div class="box-layer">
+                <div class="content">
+                    <div class="name"><a href="#" id="Name">NAME</a></div>
+                    <div class="email"><a href="#" id="Email">EMAIL</a></div>
+                    <div class="phone"><a href="#" id="Phone">PHONE NUMBER</a></div>
+                    <div class="submit" id="submit"><a href="#" id="Submit">SUBMIT</a></div>
+                </div>
+            </div>
+            <span onclick="closeFullImg()">X</span>
+        </div>
+        <div class="header">
+            <div class="navbar">
+                <nav>
+                    <button>logo</button>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        
+                    </ul>
+                </nav>
+                <div class="body-content">
+                    <div class="container1">
+                        <h1 class="heading">AI DOSEN'T HAVE TO BE <br> EVIL TO DESTROY <br> HUMANITY</h1>
+                        <img src="/images/bulb.png" class="bulb">
+                        
+                    </div>
+                    <div class="container2">
+                        <div class="box">
+                            <div class="box1">
+                                <h2>TO PROCEED PLEASE CLICK <br> ANY ONE BUTTON FROM <br> BELOW</h2>
+                                <div class="text"><a href="#" onclick="openFullImg1()">Book a Demo</a></div>
+                                <div class="text"><a href="#" onclick="openFullImg2()">Call us</a></div>
+                                <div class="text"><a href="#" onclick="openFullImg3()">Reach us At</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="footer">
+                    <div>
+                        <h2>CONTACT WITH US AT</h2>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram-square"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-whatsapp-square"></i>
+                    </div>
+                    <div>
+                        <button class="footer-logo">logo</button>
+                    </div>
+                    <div>
+                        <h2>Important Links</h2>
+                        <h2>Home About us Contact us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <script>
+        var fullImgBox1 = document.getElementById("fullImgBox1");
+        var submit = document.getElementById("submit");
+        var Name = document.getElementById("Name");
+        var Email = document.getElementById("Email");
+        var Phone = document.getElementById("Phone");
+        var Submit = document.getElementById("Submit");
+        var heading = document.getElementById("heading");
+
+
+        function openFullImg1(){
+            fullImgBox1.style.visibility = "visible";
+            submit.style.visibility = "visible";
+            submit.style.width = "45%";
+            submit.style.left = "25%";
+            heading.innerHTML = "BOOK A DEMO";
+            Name.innerHTML = "NAME";
+            Email.innerHTML = "EMAIL"
+            Phone.innerHTML = "PHONE NUMBER"
+            Submit.innerHTML = "SUBMIT"
+        }
+        function openFullImg2(){
+            fullImgBox1.style.visibility = "visible";
+            submit.style.visibility = "hidden";
+            heading.innerHTML = "CALL US";
+            Name.innerHTML = "PHONE NUMBER";
+            Email.innerHTML = "1234567890";
+            Phone.innerHTML = "1234567890";
+            
+        }
+        function openFullImg3(){
+            fullImgBox1.style.visibility = "visible";
+            submit.style.width = "90%";
+            submit.style.visibility = "visible";
+            submit.style.left = "24px";
+            heading.innerHTML = "REACH US AT";
+            Name.innerHTML = "ADDRESS";
+            Email.innerHTML = "XX, AREA, CITY";
+            Phone.innerHTML = "STATE";
+            Submit.innerHTML = "PIN CODE";
+
+
+        }
+
+        function closeFullImg(){
+            fullImgBox1.style.visibility = "hidden";
+            submit.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>
